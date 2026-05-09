@@ -10,6 +10,8 @@ export const URLS = {
       magicCathering: "/catalog/magic-the-cathering",
       warhammer: "/catalog/warhammer",
       paints: "/catalog/paints",
+      gameAccessories: "/catalog/game-accessories",
+      accessoriesForModeling: "/catalog/accessories-for-modeling",
     },
   },
   events: "/events",

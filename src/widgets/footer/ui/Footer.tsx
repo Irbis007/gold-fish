@@ -1,10 +1,9 @@
 import { logo } from "@shared/assets";
 import { URLS } from "@shared/consts";
-import { Button } from "@shared/ui";
+import { Button, NavLink } from "@shared/ui";
 import { FaInstagram } from "react-icons/fa";
 import { LiaFacebookSquare } from "react-icons/lia";
 import { RiVkLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -22,20 +21,36 @@ export function Footer() {
         <div className="md:row-start-1 md:row-end-3 md:col-start-2 flex flex-col gap-2 mt-8 md:mt-0">
           <div className="text-xl font-bold">Catalog</div>
           <div className="flex-col gap-1 hidden md:flex">
-            <div className="link">Warhammer 40000</div>
-            <div className="link">Board games</div>
-            <div className="link">Magic: the Gathering</div>
-            <div className="link">Game accessories</div>
-            <div className="link">Paints</div>
-            <div className="link">Accessories for modeling</div>
+            <NavLink to={URLS.catalog.products.warhammer}>
+              Warhammer 40000
+            </NavLink>
+            <NavLink to={URLS.catalog.products.boardGames}>Board games</NavLink>
+            <NavLink to={URLS.catalog.products.magicCathering}>
+              Magic: the Gathering
+            </NavLink>
+            <NavLink to={URLS.catalog.products.gameAccessories}>
+              Game accessories
+            </NavLink>
+            <NavLink to={URLS.catalog.products.paints}>Paints</NavLink>
+            <NavLink to={URLS.catalog.products.accessoriesForModeling}>
+              Accessories for modeling
+            </NavLink>
           </div>
         </div>
         <div className="md:row-start-1 md:row-end-3 md:col-start-3 flex flex-col gap-2 mt-2 md:mt-0">
           <div className="link font-bold text-xl">Club Rules</div>
-          <Link to={URLS.events} className="link font-bold text-xl">Events</Link>
-          <Link to={URLS.about} className="link font-bold text-xl">About</Link>
-          <Link to={URLS.contacts} className="link font-bold text-xl">Contacts</Link>
-          <Link to={URLS.blog} className="link font-bold text-xl">Blog</Link>
+          <NavLink to={URLS.events} className="font-bold text-xl">
+            Events
+          </NavLink>
+          <NavLink to={URLS.about} className="font-bold text-xl">
+            About
+          </NavLink>
+          <NavLink to={URLS.contacts} className="font-bold text-xl">
+            Contacts
+          </NavLink>
+          <NavLink to={URLS.blog} className="font-bold text-xl">
+            Blog
+          </NavLink>
         </div>
         <div className="md:row-start-1 md:row-end-3 md:col-start-4 hidden md:flex flex-col gap-2">
           <div className="link font-bold text-xl">Payment and delivery</div>

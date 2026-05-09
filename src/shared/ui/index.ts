@@ -7,3 +7,4 @@ export { Dropdown } from "./Dropdown";
 export { Checkbox } from "./Checkbox";
 export { Radio } from "./Radio";
 export { Calendar } from "./Calendar";
+export { NavLink } from "./CustomNavLink";

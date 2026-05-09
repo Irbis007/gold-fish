@@ -3,7 +3,7 @@ import { URLS } from "@shared/consts";
 import { SearchInput } from "@shared/ui";
 import { FaPhoneAlt, FaUser } from "react-icons/fa";
 import { IoCartSharp, IoClose, IoMenu } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HeaderMenu } from "./HeaderMenu";
 import { useState } from "react";
 import { useOverflowStore } from "@shared/lib";
@@ -51,8 +51,10 @@ export function Header() {
             <Link to={URLS.cart} className="relative">
               <IoCartSharp size={24} color="white" />
               {!!productsCount && (
-                <div className="absolute -top-1 -right-1 aspect-square flex justify-center items-center min-w-4 
-                min-h-4 p-0.5 rounded-full bg-accent text-white text-xs">
+                <div
+                  className="absolute -top-1 -right-1 aspect-square flex justify-center items-center min-w-4 
+                min-h-4 p-0.5 rounded-full bg-accent text-white text-xs"
+                >
                   {productsCount}
                 </div>
               )}
@@ -66,21 +68,43 @@ export function Header() {
             <div className="link" onClick={() => setIsMenuActive(true)}>
               <IoMenu color="inherit" size={24} />
             </div>
-            <div className="link">
-              <Link to={URLS.catalog.default}>Catalog</Link>
-            </div>
+            <NavLink
+              to={URLS.catalog.default}
+              className={({ isActive }) => `link ${isActive && "text-accent"}`}
+            >
+              Catalog
+            </NavLink>
           </div>
-          <Link to={`${URLS.catalog.default}/warhammer`} className="link">Wharhammer</Link>
-          <Link to={`${URLS.catalog.default}/magic-the-cathering`} className="link">Magic:the Cathering</Link>
-          <Link to={URLS.events} className="link">
+          <NavLink
+            to={`${URLS.catalog.default}/warhammer`}
+            className={({ isActive }) => `link ${isActive && "text-accent"}`}
+          >
+            Wharhammer
+          </NavLink>
+          <NavLink
+            to={`${URLS.catalog.default}/magic-the-cathering`}
+            className={({ isActive }) => `link ${isActive && "text-accent"}`}
+          >
+            Magic:the Cathering
+          </NavLink>
+          <NavLink
+            to={URLS.events}
+            className={({ isActive }) => `link ${isActive && "text-accent"}`}
+          >
             Events
-          </Link>
-          <Link to={URLS.about} className="link">
+          </NavLink>
+          <NavLink
+            to={URLS.about}
+            className={({ isActive }) => `link ${isActive && "text-accent"}`}
+          >
             About
-          </Link>
-          <Link to={URLS.contacts} className="link">
+          </NavLink>
+          <NavLink
+            to={URLS.contacts}
+            className={({ isActive }) => `link ${isActive && "text-accent"}`}
+          >
             Contacts
-          </Link>
+          </NavLink>
         </div>
 
         <HeaderMenu isActive={isMenuActive} setIsActive={setIsMenuActive} />
