@@ -2,6 +2,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import type { CalendarValue } from "../model";
 import { Calendar as LibCalendar } from "react-calendar";
 import type { ComponentProps } from "react";
+import dayjs from "dayjs";
 type Props = Omit<ComponentProps<typeof LibCalendar>, "value" | "onChange"> & {
   value: CalendarValue;
   onChange: (val: CalendarValue) => void;
@@ -18,8 +19,8 @@ export function Calendar({ value, onChange, maxDate, minDate }: Props) {
       nextLabel={<IoIosArrowForward />}
       tileClassName={({ date }) => {
         const defaultClasses = "text-start rounded-lg w-6 h-6 max-w-6 px-0.5";
-        if (!value || Array.isArray(value)) return defaultClasses;
-        if (maxDate && date.getTime() > maxDate.getTime())
+        if (Array.isArray(value)) return defaultClasses;
+        if (dayjs(date).isAfter(maxDate) || dayjs(date).isBefore(minDate))
           return "text-gray-400 cursor-not-allowed " + defaultClasses;
         return defaultClasses;
       }}
