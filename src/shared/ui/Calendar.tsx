@@ -19,7 +19,7 @@ export function Calendar({ value, onChange, maxDate, minDate }: Props) {
       tileClassName={({ date }) => {
         const defaultClasses = "text-start rounded-lg w-6 h-6 max-w-6 px-0.5";
         if (!value || Array.isArray(value)) return defaultClasses;
-        if (date.getTime() > value.getTime())
+        if (maxDate && date.getTime() > maxDate.getTime())
           return "text-gray-400 cursor-not-allowed " + defaultClasses;
         return defaultClasses;
       }}
