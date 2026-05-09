@@ -1,13 +1,18 @@
+import { useNavigate } from "react-router-dom";
+
 type Props = {
   title: string;
   url: string;
   index: number;
+  link: string
 };
 
-export function CatalogCard({ title, index, url }: Props) {
+export function CatalogCard({ title, index, url, link }: Props) {
+  const navigation = useNavigate()
   return (
     <div
       className={`group relative rounded-lg cursor-pointer overflow-hidden group ${index === 0 ? "row-start-1 row-end-3 sm:col-start-1 sm:col-end-3 md:col-start-1 md:col-end-2" : ""} w-full group-hover`}
+      onClick={() => navigation(link)}
     >
       <img
         src={url}

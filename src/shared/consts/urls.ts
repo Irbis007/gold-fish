@@ -6,6 +6,10 @@ export const URLS = {
     default: "/catalog",
     products: {
       default: "/catalog/product/:id",
+      boardGames: "/catalog/board-games",
+      magicCathering: "/catalog/magic-the-cathering",
+      warhammer: "/catalog/warhammer",
+      paints: "/catalog/paints",
     },
   },
   events: "/events",

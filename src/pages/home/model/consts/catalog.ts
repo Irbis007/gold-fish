@@ -5,31 +5,32 @@ import {
   catalog4,
   catalog5,
 } from "@shared/assets";
+import { URLS } from "@shared/consts";
 
 export const catalog = [
   {
     url: catalog1,
     title: "Board games",
-    link: "",
+    link: `${URLS.catalog.products.boardGames}`,
   },
   {
     url: catalog2,
     title: "Wargames",
-    link: "",
+    link: `${URLS.catalog.products.warhammer}`,
   },
   {
     url: catalog3,
     title: "Paints",
-    link: "",
+    link: `${URLS.catalog.products.paints}`,
   },
   {
     url: catalog4,
     title: "Magic:the Cathering",
-    link: "",
+    link: `${URLS.catalog.products.magicCathering}`,
   },
   {
     url: catalog5,
     title: "The entire catalog",
-    link: "",
+    link: `${URLS.catalog.default}`,
   },
 ];
