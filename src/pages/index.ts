@@ -1,0 +1,8 @@
+export { Home } from "./home";
+export { Blog } from "./blog";
+export { About } from "./about";
+export { Catalog } from "./catalog";
+export { Events } from "./events";
+export { Product } from "./product";
+export { Contacts } from "./contacts";
+export { Cart } from "./cart";

@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Trebuchet Ms", sans-serif;
+  background-color: #FFFBF8;
+}
+
+@layer components {
+  .container {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5px;
+
+    @variant sm {
+      max-width: 540px;
+    }
+  }
+  .link {
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover {
+      color: #f9a43f;
+    }
+  }
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+    @media (max-width: 640px) {
+      font-size: 24px;
+    }
+  }
+  .appearance-hide::-webkit-outer-spin-button,
+  .appearance-hide::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .appearance-hide {
+    -moz-appearance: textfield; /* Firefox */
+  }
+}
+
+.swiper-slide {
+  width: max-content !important;
+}
+
+@font-face {
+  font-family: "Trebuchet Ms";
+  src: url("./shared/assets/fonts/trebuchetms.ttf");
+}
