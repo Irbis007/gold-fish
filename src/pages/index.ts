@@ -6,3 +6,4 @@ export { Events } from "./events";
 export { Product } from "./product";
 export { Contacts } from "./contacts";
 export { Cart } from "./cart";
+export { EventPage } from "./eventPage";

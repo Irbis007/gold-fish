@@ -1,13 +1,13 @@
-import { about, event1, event2, info1, info2, info3 } from "@shared/assets";
+import { about, info1, info2, info3 } from "@shared/assets";
 
 import Slider from "./Slider";
 import { ProductsSlider } from "@widgets/productsSlider";
 import { catalog, products, productsWithDiscount } from "../model/consts";
 import { Button } from "@shared/ui";
-import { EventCard } from "./EventCard";
 import { InfoCard } from "./InfoCard";
 import { CatalogCard } from "./CatalogCard";
 import { Contacts } from "@widgets/contacts";
+import { EventsCards } from "@widgets/eventsCards";
 
 export function Home() {
   return (
@@ -35,21 +35,7 @@ export function Home() {
       </div>
       <div className="container mt-20">
         <div className="title">Upcoming events</div>
-        <div className="flex gap-4 mt-5 overflow-x-scroll md:overflow-auto">
-          <EventCard
-            img={event1}
-            title="Halloween with GoldFish"
-            date="October 31, 2021, 7:00 PM"
-            description="We will gather to find out who the Mafia really was and what
-                will happen to those who were killed..."
-          />
-          <EventCard
-            img={event2}
-            title="Warhammer Tournament"
-            date="November 9, 2021, 6:30 PM"
-            description="Ready to fight in a fierce Warhammer battle? No? We'll definitely teach you!"
-          />
-        </div>
+        <EventsCards/>
         <div className="flex justify-center mt-5">
           <Button title="Learn more" size="large" />
         </div>

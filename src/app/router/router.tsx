@@ -9,6 +9,7 @@ import {
   Product,
   Contacts,
   Cart,
+  EventPage,
 } from "@pages";
 import { AppLayout } from "../layouts";
 
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: `*`,
-            element: <Catalog />,
+            index: true
           },
         ],
       },
@@ -47,10 +48,13 @@ export const router = createBrowserRouter([
         element: <Product />,
       },
       {
-        path: URLS.events,
+        path: URLS.events.default,
         element: <Events />,
       },
-
+      {
+        path: URLS.events.id,
+        element: <EventPage />,
+      },
       {
         path: URLS.cart,
         element: <Cart />,

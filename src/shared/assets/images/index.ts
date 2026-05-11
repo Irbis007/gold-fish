@@ -31,5 +31,6 @@ export {
   pageEvent4,
   pageEvent5,
   pageEvent6,
+  eventPageImg,
 } from "./events";
 export { productImg1, productImg2, productImg3 } from "./product";

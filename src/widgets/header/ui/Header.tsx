@@ -88,7 +88,7 @@ export function Header() {
             Magic:the Cathering
           </NavLink>
           <NavLink
-            to={URLS.events}
+            to={URLS.events.default}
             className={({ isActive }) => `link ${isActive && "text-accent"}`}
           >
             Events

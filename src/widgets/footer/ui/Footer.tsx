@@ -39,7 +39,7 @@ export function Footer() {
         </div>
         <div className="md:row-start-1 md:row-end-3 md:col-start-3 flex flex-col gap-2 mt-2 md:mt-0">
           <div className="link font-bold text-xl">Club Rules</div>
-          <NavLink to={URLS.events} className="font-bold text-xl">
+          <NavLink to={URLS.events.default} className="font-bold text-xl">
             Events
           </NavLink>
           <NavLink to={URLS.about} className="font-bold text-xl">

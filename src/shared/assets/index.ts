@@ -39,4 +39,5 @@ export {
   productImg1,
   productImg2,
   productImg3,
+  eventPageImg,
 } from "./images";

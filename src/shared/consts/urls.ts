@@ -15,7 +15,10 @@ export const URLS = {
       childrenProducts: "/catalog/children-products",
     },
   },
-  events: "/events",
+  events: {
+    default: "/events",
+    id: "/events/:id",
+  },
   contacts: "/contacts",
   cart: "/cart",
 };
