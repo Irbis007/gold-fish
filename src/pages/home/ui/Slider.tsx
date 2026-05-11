@@ -1,42 +1,52 @@
 import { slide1, slide2, slide3 } from "@shared/assets";
+import { URLS } from "@shared/consts";
 import { Button } from "@shared/ui/Button";
 import useEmblaCarousel from "embla-carousel-react";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const sliders = [
   {
     title: "Board game wargame",
     subtitle: "Warhammer games",
     image: slide1,
+    link: URLS.catalog.products.warhammer,
   },
   {
     title: "The most popular card game",
     subtitle: "Magic: the Gathering",
     image: slide2,
+    link: URLS.catalog.products.magicCathering,
   },
   {
     title: "Try games of different genres",
     subtitle: "The entire catalog",
     image: slide3,
+    link: URLS.catalog.default,
   },
+
   {
     title: "Board game wargame",
     subtitle: "Warhammer games",
     image: slide1,
+    link: URLS.catalog.products.warhammer,
   },
   {
     title: "The most popular card game",
     subtitle: "Magic: the Gathering",
     image: slide2,
+    link: URLS.catalog.products.magicCathering,
   },
   {
     title: "Try games of different genres",
     subtitle: "The entire catalog",
     image: slide3,
+    link: URLS.catalog.default,
   },
 ];
 export default function Slider() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const navigate = useNavigate()
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
@@ -54,7 +64,7 @@ export default function Slider() {
                   </div>
                 </div>
 
-                <Button title="Learn more" />
+                <Button title="Learn more" onClick={() => navigate(slide.link)}/>
               </div>
               <img src={slide.image} alt="slide img" />
             </div>
