@@ -12,6 +12,7 @@ export const URLS = {
       paints: "/catalog/paints",
       gameAccessories: "/catalog/game-accessories",
       accessoriesForModeling: "/catalog/accessories-for-modeling",
+      childrenProducts: "/catalog/children-products",
     },
   },
   events: "/events",

@@ -1,4 +1,4 @@
-import { Button, Checkbox, Dropdown, Input } from "@shared/ui";
+import { Button, Checkbox, Dropdown, Input, NavLink } from "@shared/ui";
 import { Range } from "react-range";
 import { Link } from "react-router-dom";
 import { boardGames, categories } from "../model/consts";
@@ -48,13 +48,13 @@ export function Sidebar() {
                   }
                 />
                 {categories.map((item, i) => (
-                  <Link
+                  <NavLink
                     key={i}
                     to={item.link}
-                    className="link text-xl font-bold"
+                    className="text-xl font-bold"
                   >
                     {item.title}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
             }

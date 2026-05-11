@@ -11,7 +11,10 @@ export function NavLink(props: Props) {
   return (
     <LibNavLink
       {...props}
-      className={({ isActive }) => `link ${props.className} ${isActive && "text-accent"}`}
+      className={({ isActive }) => {
+        return`link ${props.className} ${isActive && "text-accent"}` 
+      }}
+      end
     ></LibNavLink>
   );
 }

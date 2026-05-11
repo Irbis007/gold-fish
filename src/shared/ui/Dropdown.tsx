@@ -9,6 +9,7 @@ type Props = {
   customArrow?: ReactNode;
   titleClasses?: string;
   contentClasses?: string;
+  isOpened?: true
 };
 export function Dropdown({
   title,
@@ -16,8 +17,9 @@ export function Dropdown({
   absoluteContent,
   containerClasses,
   titleClasses,
+  isOpened
 }: Props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(!!isOpened);
   return (
     <div className={`relative ${containerClasses}`}>
       <div

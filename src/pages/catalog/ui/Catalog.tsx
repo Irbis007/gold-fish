@@ -2,7 +2,7 @@ import { Breadcrumbs } from "@shared/ui";
 import { Sidebar } from "./Sidebar";
 import { cards } from "../model/consts";
 import { Pagination } from "@widgets/pagination";
-import { useEffect, useMemo, useState } from "react";
+import {  useMemo, useState } from "react";
 import { ProductCard } from "@entities/productCard";
 import { useFiltersStore } from "../model/stores";
 import { MdFilterAlt } from "react-icons/md";
@@ -20,6 +20,7 @@ export function Catalog() {
     () =>
       cards.filter((c) => {
         const players = c.players.split("-");
+        setActivePage(1);
         if (isWithDiscount) {
           return !!c.discountPercent;
         }
@@ -31,10 +32,6 @@ export function Catalog() {
       }),
     [isWithDiscount, playersCount, priceRange],
   );
-
-  useEffect(() => {
-    setActivePage(1);
-  }, [filteredCards]);
 
   const currentCards = filteredCards.slice(activePage, activePage + MAX_CARDS);
 
