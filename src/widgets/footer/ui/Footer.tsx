@@ -48,7 +48,7 @@ export function Footer() {
           <NavLink to={URLS.contacts} className="font-bold text-xl">
             Contacts
           </NavLink>
-          <NavLink to={URLS.blog} className="font-bold text-xl">
+          <NavLink to={URLS.blog.default} className="font-bold text-xl">
             Blog
           </NavLink>
         </div>

@@ -48,11 +48,7 @@ export function Sidebar() {
                   }
                 />
                 {categories.map((item, i) => (
-                  <NavLink
-                    key={i}
-                    to={item.link}
-                    className="text-xl font-bold"
-                  >
+                  <NavLink key={i} to={item.link} className="text-xl font-bold">
                     {item.title}
                   </NavLink>
                 ))}
@@ -100,6 +96,7 @@ export function Sidebar() {
                     return (
                       <div
                         {...props}
+                        key={props.key}
                         className="w-2 h-2 rounded-full bg-[#2a2a2a]"
                       ></div>
                     );
@@ -183,6 +180,7 @@ export function Sidebar() {
             return (
               <div
                 {...props}
+                key={props.key}
                 className="w-2 h-2 rounded-full bg-[#2a2a2a]"
               ></div>
             );

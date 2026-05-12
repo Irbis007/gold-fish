@@ -7,15 +7,15 @@ type Props = {
 };
 
 export function ProductsSlider({ products }: Props) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
   return (
     <div className="relative">
       <div className="" ref={emblaRef}>
         <div className="flex">
           {products.map((product, i) => (
-            <div className="ml-5">
-              <ProductCard {...product} key={i} />
+            <div className="ml-5" key={i}>
+              <ProductCard {...product} />
             </div>
           ))}
         </div>

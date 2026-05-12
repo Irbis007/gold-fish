@@ -23,7 +23,19 @@ export {
   product6,
 } from "./products";
 export { about1, about2, about3, about4 } from "./about";
-export { blog1, blog2, blog3, blog4, blog5, blog6 } from "./blog";
+export {
+  blog1,
+  blog2,
+  blog3,
+  blog4,
+  blog5,
+  blog6,
+  blogPageImg1,
+  blogPageImg2,
+  blogPageImg3,
+  blogPageImg4,
+  blogPageImg5,
+} from "./blog";
 export {
   pageEvent1,
   pageEvent2,

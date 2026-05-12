@@ -10,6 +10,7 @@ import {
   Contacts,
   Cart,
   EventPage,
+  BlogPage,
 } from "@pages";
 import { AppLayout } from "../layouts";
 
@@ -22,8 +23,12 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: URLS.blog,
+        path: URLS.blog.default,
         element: <Blog />,
+      },
+      {
+        path: URLS.blog.id,
+        element: <BlogPage />,
       },
       {
         path: URLS.about,

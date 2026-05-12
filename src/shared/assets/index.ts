@@ -40,4 +40,9 @@ export {
   productImg2,
   productImg3,
   eventPageImg,
+  blogPageImg1,
+  blogPageImg2,
+  blogPageImg3,
+  blogPageImg4,
+  blogPageImg5,
 } from "./images";

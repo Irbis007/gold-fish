@@ -4,10 +4,10 @@ import Slider from "./Slider";
 import { ProductsSlider } from "@widgets/productsSlider";
 import { catalog, products, productsWithDiscount } from "../model/consts";
 import { Button } from "@shared/ui";
-import { InfoCard } from "./InfoCard";
 import { CatalogCard } from "./CatalogCard";
 import { Contacts } from "@widgets/contacts";
 import { EventsCards } from "@widgets/eventsCards";
+import { BlogCard } from "@entities/blog";
 
 export function Home() {
   return (
@@ -35,7 +35,7 @@ export function Home() {
       </div>
       <div className="container mt-20">
         <div className="title">Upcoming events</div>
-        <EventsCards/>
+        <EventsCards />
         <div className="flex justify-center mt-5">
           <Button title="Learn more" size="large" />
         </div>
@@ -43,17 +43,17 @@ export function Home() {
       <div className="container mt-20">
         <div className="title">More interesting information</div>
         <div className="flex gap-4 overflow-x-auto">
-          <InfoCard
+          <BlogCard
             img={info1}
             title="Aeronautics Imperialis: Game Introduction"
             description="Let's take a closer look at the rules of the game."
           />
-          <InfoCard
+          <BlogCard
             img={info2}
             title="The Best Steam Board Games to Play with Friends During Quarantine"
             description="According to the 2021 rating"
           />
-          <InfoCard
+          <BlogCard
             img={info3}
             title="Desirable but unlikely releases"
             description={`A short list of "if only..."`}

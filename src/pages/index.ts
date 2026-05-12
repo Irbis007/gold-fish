@@ -7,3 +7,4 @@ export { Product } from "./product";
 export { Contacts } from "./contacts";
 export { Cart } from "./cart";
 export { EventPage } from "./eventPage";
+export { BlogPage } from "./blogPage";

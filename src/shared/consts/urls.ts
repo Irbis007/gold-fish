@@ -1,6 +1,9 @@
 export const URLS = {
   home: "/",
-  blog: "/blog",
+  blog: {
+    default: "/blog",
+    id: "/blog/:id",
+  },
   about: "/about",
   catalog: {
     default: "/catalog",
@@ -21,4 +24,4 @@ export const URLS = {
   },
   contacts: "/contacts",
   cart: "/cart",
-};
+} as const;
