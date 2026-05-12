@@ -19,7 +19,7 @@ export function ProductCard({ ...product }: ProductItem) {
     minAge,
   } = product;
   return (
-    <div className="relative flex flex-col shadow-[5px_6px_16px] shadow-slate-300 min-w-[225px] min-h-[410px] py-4 px-2 rounded-lg">
+    <div className="relative flex flex-col shadow-lg min-w-[225px] min-h-[410px] py-4 px-2 rounded-lg">
       <img src={image} alt={`product-${id}`} className="mx-auto" />
       <div className="flex-grow flex flex-col justify-end">
         <div className="flex gap-5 justify-center mt-1">
@@ -47,9 +47,7 @@ export function ProductCard({ ...product }: ProductItem) {
             title="In cart"
             size="small"
             icon={<IoCartOutline size={18} />}
-            onClick={() =>
-              addToCart(id, product)
-            }
+            onClick={() => addToCart(id, product)}
           />
           <Button title="buy in one click" size="small" outlined />
         </div>

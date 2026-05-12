@@ -1,4 +1,5 @@
 import { BlogCard } from "@entities/blog";
+import { ProductCard } from "@entities/productCard";
 import {
   blogPageImg1,
   blogPageImg2,
@@ -7,8 +8,13 @@ import {
   blogPageImg5,
   info1,
   info2,
+  product1,
+  product2,
+  product3,
+  product4,
 } from "@shared/assets";
 import { Breadcrumbs } from "@shared/ui";
+import { v4 } from "uuid";
 
 export function BlogPage() {
   return (
@@ -36,8 +42,8 @@ export function BlogPage() {
             choose, this article should be helpful!
           </p>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/2">
             <div className="font-bold text-1.5xl">The Imperial Navy</div>
             <p className="mt-9">
               The Imperial Navy is arguably the greatest power in the galaxy,
@@ -52,7 +58,7 @@ export function BlogPage() {
           <img
             src={blogPageImg2}
             alt="blog img"
-            className="max-w-[540px] w-1/2 object-cover rounded-lg"
+            className="max-w-[540px] md:w-1/2 object-cover rounded-lg"
           />
         </div>
         <div>
@@ -87,8 +93,8 @@ export function BlogPage() {
             wreckage of enemy vehicles will be burning on the battlefield.
           </p>
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/2">
             <div className="font-bold text-1.5xl">The Thunderbolt</div>
             <p className="mt-9">
               Calling the Thunderbolt a versatile weapon is a pretty good idea.
@@ -107,11 +113,11 @@ export function BlogPage() {
           <img
             src={blogPageImg3}
             alt="blog img"
-            className="max-w-[540px] w-1/2 object-cover rounded-lg"
+            className="max-w-[540px] md:w-1/2 object-cover rounded-lg"
           />
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/2">
             <div className="font-bold text-1.5xl">The Thunderbolt Fury</div>
             <p className="mt-9">
               The Thunderbolt Fury is another type of vehicle available to the
@@ -131,11 +137,11 @@ export function BlogPage() {
           <img
             src={blogPageImg4}
             alt="blog img"
-            className="max-w-[540px] w-1/2 object-cover rounded-lg"
+            className="max-w-[540px] md:w-1/2 object-cover rounded-lg"
           />
         </div>
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/2">
             <div className="font-bold text-1.5xl">Marauder Destroyer</div>
             <p className="mt-9">
               Yes, you won't find this particular Marauder variant in the Wings
@@ -154,7 +160,7 @@ export function BlogPage() {
           <img
             src={blogPageImg5}
             alt="blog img"
-            className="max-w-[540px] w-1/2 object-cover rounded-lg"
+            className="max-w-[540px] md:w-1/2 object-cover rounded-lg"
           />
         </div>
       </div>
@@ -170,6 +176,47 @@ export function BlogPage() {
             img={info2}
             title="The Best Steam Board Games to Play with Friends During Quarantine"
             description="According to the 2021 rating"
+          />
+        </div>
+      </div>
+      <div className="mt-10 md:mt-20">
+        <div className="title text-1.5xl">We recommend for you</div>
+        <div className="grid py-6 gap-4 grid-cols-[repeat(4,250px)] lg:grid-cols-4 max-lg:overflow-auto">
+          <ProductCard
+            image={product1}
+            title="Warhammer 40,000: Chaos Space Marines"
+            price={29}
+            players="2-6"
+            playingTime="30-60"
+            id={v4()}
+            minAge={18}
+          />
+          <ProductCard
+            image={product2}
+            title="On the mars"
+            price={29}
+            players="2-6"
+            playingTime="30-60"
+            id={v4()}
+            minAge={18}
+          />
+          <ProductCard
+            image={product3}
+            title="Broken Realms: Horrek's Dreadlance"
+            price={29}
+            players="2-6"
+            playingTime="30-60"
+            id={v4()}
+            minAge={18}
+          />
+          <ProductCard
+            image={product4}
+            title="Star Wars Outer Rim"
+            price={29}
+            players="2-6"
+            playingTime="30-60"
+            id={v4()}
+            minAge={18}
           />
         </div>
       </div>
