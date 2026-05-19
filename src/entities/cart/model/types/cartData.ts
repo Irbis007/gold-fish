@@ -1,4 +1,4 @@
-import type { ProductItem } from "@entities/productCard";
+import type { ProductItem } from "@entities/product";
 
 export type CartData = {
   totalSummary: number;

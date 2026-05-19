@@ -1,4 +1,4 @@
-import type { ProductItem } from "@entities/productCard";
+import type { ProductItem } from "@entities/product";
 import { create } from "zustand";
 import type { CartData } from "../types/cartData";
 import { immer } from "zustand/middleware/immer";

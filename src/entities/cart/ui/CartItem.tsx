@@ -1,4 +1,4 @@
-import type { ProductItem } from "@entities/productCard";
+import type { ProductItem } from "@entities/product";
 import { FaTrashAlt } from "react-icons/fa";
 import { useCartStore } from "../model/stores";
 

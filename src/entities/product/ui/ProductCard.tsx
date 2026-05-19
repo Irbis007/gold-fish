@@ -4,6 +4,8 @@ import { FaUsers } from "react-icons/fa";
 import { RiTimerLine } from "react-icons/ri";
 import { IoCartOutline } from "react-icons/io5";
 import { useCartStore } from "@entities/cart";
+import { useNavigate } from "react-router-dom";
+import { URLS } from "@shared/consts";
 
 export function ProductCard({ ...product }: ProductItem) {
   const addToCart = useCartStore((state) => state.onAddItem);
@@ -18,8 +20,13 @@ export function ProductCard({ ...product }: ProductItem) {
     discountPercent,
     minAge,
   } = product;
+  const navigate = useNavigate();
   return (
-    <div className="relative flex flex-col shadow-lg min-w-[225px] min-h-[410px] py-4 px-2 rounded-lg">
+    <div className="relative flex flex-col shadow-lg min-w-[225px] min-h-[410px] py-4 px-2 rounded-lg bg-white">
+      <div
+        className="w-full h-full absolute inset-0 z-10 cursor-pointer"
+        onClick={() => navigate(`${URLS.catalog.default}/1`)}
+      ></div>
       <img src={image} alt={`product-${id}`} className="mx-auto" />
       <div className="flex-grow flex flex-col justify-end">
         <div className="flex gap-5 justify-center mt-1">
@@ -42,12 +49,15 @@ export function ProductCard({ ...product }: ProductItem) {
           )}
           <span className="font-bold text-xl text-center">${price}</span>
         </div>
-        <div className="flex flex-col gap-3 justify-center items-center mt-3.5">
+        <div className="relative z-20 flex flex-col gap-3 justify-center items-center mt-3.5">
           <Button
             title="In cart"
             size="small"
             icon={<IoCartOutline size={18} />}
-            onClick={() => addToCart(id, product)}
+            onClick={(e) => {
+              e.preventDefault();
+              addToCart(id, product);
+            }}
           />
           <Button title="buy in one click" size="small" outlined />
         </div>

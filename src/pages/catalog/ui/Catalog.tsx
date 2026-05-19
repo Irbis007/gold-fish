@@ -3,7 +3,7 @@ import { Sidebar } from "./Sidebar";
 import { cards } from "../model/consts";
 import { Pagination } from "@widgets/pagination";
 import {  useMemo, useState } from "react";
-import { ProductCard } from "@entities/productCard";
+import { ProductCard } from "@entities/product";
 import { useFiltersStore } from "../model/stores";
 import { MdFilterAlt } from "react-icons/md";
 import { BsArrowLeft } from "react-icons/bs";

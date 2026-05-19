@@ -1,4 +1,4 @@
-import type { ProductItem } from "@entities/productCard";
+import type { ProductItem } from "@entities/product";
 import { product5, product6, product4 } from "@shared/assets";
 export const productsWithDiscount: ProductItem[] = [
   {

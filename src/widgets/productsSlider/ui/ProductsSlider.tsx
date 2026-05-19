@@ -1,4 +1,4 @@
-import { ProductCard, type ProductItem } from "@entities/productCard";
+import { ProductCard, type ProductItem } from "@entities/product";
 import useEmblaCarousel from "embla-carousel-react";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 

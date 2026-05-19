@@ -1,5 +1,5 @@
 import { BlogCard } from "@entities/blog";
-import { ProductCard } from "@entities/productCard";
+import { ProductCard } from "@entities/product";
 import {
   blogPageImg1,
   blogPageImg2,
