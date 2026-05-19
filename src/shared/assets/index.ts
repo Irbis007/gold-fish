@@ -1,4 +1,4 @@
-export { logo } from "./icons";
+export { logo, logoOrange } from "./icons";
 export {
   slide1,
   slide2,
@@ -45,4 +45,7 @@ export {
   blogPageImg3,
   blogPageImg4,
   blogPageImg5,
+  levelBronze,
+  levelGold,
+  levelSilver,
 } from "./images";

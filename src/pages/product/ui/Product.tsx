@@ -3,7 +3,7 @@ import { Slider } from "./Slider";
 import { Breadcrumbs, Button, Dropdown } from "@shared/ui";
 import { RiTimerLine } from "react-icons/ri";
 import { Tabulation } from "./Tabulation";
-import { ProductCard } from "@entities/productCard";
+import { ProductCard } from "@entities/product";
 import { product2, product3 } from "@shared/assets";
 
 export function Product() {

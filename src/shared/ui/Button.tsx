@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 
 type Props = {
   title: string;
-  onClick?: () => void;
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
   size?: "small" | "medium" | "large";
   outlined?: boolean;
   icon?: ReactNode;

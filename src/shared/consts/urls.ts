@@ -1,5 +1,12 @@
 export const URLS = {
   home: "/",
+  account: {
+    default: "/account",
+    profile: "profile",
+    orders: "/account/orders",
+    events: "events",
+    settings: "settings",
+  },
   blog: {
     default: "/blog",
     id: "/blog/:id",

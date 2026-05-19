@@ -5,6 +5,7 @@ type Props = {
   to: string;
   children: ReactNode;
   className?: string
+  onClick?: () => void
 };
 
 export function NavLink(props: Props) {
@@ -15,6 +16,7 @@ export function NavLink(props: Props) {
         return`link ${props.className} ${isActive && "text-accent"}` 
       }}
       end
+      onClick={props.onClick}
     ></LibNavLink>
   );
 }

@@ -8,3 +8,10 @@ export { Contacts } from "./contacts";
 export { Cart } from "./cart";
 export { EventPage } from "./eventPage";
 export { BlogPage } from "./blogPage";
+export {
+  AccountWrapper,
+  Events as AccountEvents,
+  Profile,
+  Settings,
+  Orders,
+} from "./account";

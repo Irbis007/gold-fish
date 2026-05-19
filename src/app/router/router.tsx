@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { URLS } from "@shared/consts";
 import {
   Home,
@@ -11,8 +11,13 @@ import {
   Cart,
   EventPage,
   BlogPage,
+  AccountWrapper,
+  AccountEvents,
+  Settings,
+  Orders,
 } from "@pages";
 import { AppLayout } from "../layouts";
+import { Profile } from "@pages/account/ui/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +26,32 @@ export const router = createBrowserRouter([
       {
         path: URLS.home,
         element: <Home />,
+      },
+      {
+        path: URLS.account.default,
+        element: <AccountWrapper />,
+        children: [
+          {
+            index: true,
+            element: <Navigate to={URLS.account.profile} />,
+          },
+          {
+            path: URLS.account.profile,
+            element: <Profile />,
+          },
+          {
+            path: URLS.account.events,
+            element: <AccountEvents />,
+          },
+          {
+            path: URLS.account.settings,
+            element: <Settings />,
+          },
+        ],
+      },
+      {
+        path: URLS.account.orders,
+        element: <Orders />,
       },
       {
         path: URLS.blog.default,
@@ -40,7 +71,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: `*`,
-            index: true
+            index: true,
           },
         ],
       },

@@ -46,3 +46,4 @@ export {
   eventPageImg,
 } from "./events";
 export { productImg1, productImg2, productImg3 } from "./product";
+export { levelBronze, levelGold, levelSilver } from "./account";

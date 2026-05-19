@@ -47,7 +47,9 @@ export function Header() {
             </span>
           </div>
           <div className="flex gap-2 items-center lg:ml-16 md:ml-6 ml-4">
-            <FaUser size={20} color="white" />
+            <Link to={URLS.account.default}>
+              <FaUser size={20} color="white" />
+            </Link>
             <Link to={URLS.cart} className="relative">
               <IoCartSharp size={24} color="white" />
               {!!productsCount && (
